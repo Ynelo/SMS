@@ -1,7 +1,7 @@
 #include <AmperkaGPRS.h>
-#include <GPRS.h>
-#include <GPRSClient.h>
-#include <GPRSServer.h>
+//#include <GPRS.h>
+//#include <GPRSClient.h>
+//#include <GPRSServer.h>
 
 // библиотека для работы с GPRS устройством
 #include <SoftwareSerial.h>
@@ -17,7 +17,7 @@ char massage[MESSAGE_LENGTH];
 char phone[16];
 // дата отправки сообщения
 char datetime[24];
-bool flag = false;
+bool flage = false;
 
 // длина сообщения
 #define MESSAGE_LENGTH 160
@@ -58,6 +58,7 @@ GPRS gprs(mySerial);
  
 void setup()
 {
+  pinMode(A3, INPUT);
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
   pinMode(6, OUTPUT);
@@ -65,11 +66,10 @@ void setup()
   pinMode(8, OUTPUT);
   pinMode(9, OUTPUT);
   pinMode(13, OUTPUT);
-  pinMode(7, INPUT);
+  pinMode(7, OUTPUT);
   pinMode(14, OUTPUT);
   pinMode(15, OUTPUT);
   pinMode(16, OUTPUT);
-  pinMode(17, OUTPUT);
   pinMode(18, OUTPUT);
   pinMode(19, OUTPUT);
   digitalWrite(5, LOW);
@@ -98,11 +98,22 @@ void setup()
   Serial.println("GPRS init success");
 
 }
-int vale;
+double valeee = 0;
 void loop()
 {
-  vale = digitalRead(7);
-  if(vale == 0 & flag == false){
+  valeee = analogRead(A3);
+ // Serial.println(valeee);
+  if(valeee < 100 && flage == false){
+      gprs.sendSMS(phone, "!!WARNING!! BLCAKOUT IN OFFICE!!!");
+      flage = true;
+      Serial.println("---------");
+    } else if (valeee > 100 & flage == true){
+      gprs.sendSMS(phone, "The light turned on.");
+      flage = false;
+      Serial.println("+++++++");
+      }
+ // vale = digitalRead(7);
+ /* if(vale == 0 & flag == false){
    // gprs.sendSMS("+79097669661", "!!WARNING!! BLCAKOUT IN OFFICE!!!");
   gprs.sendSMS(phone, "!!WARNING!! BLCAKOUT IN OFFICE!!!");
     flag = true;
@@ -112,7 +123,7 @@ void loop()
    gprs.sendSMS(phone, "The light turned on.");
     Serial.println("+++++++");
     flag = false;
-   }
+   }*/
   if (gprs.incomingSMS()) {
     gprs.readSMS(massage, phone, datetime);
     Serial.print(massage);
@@ -129,7 +140,7 @@ void loop()
         digitalWrite(6, LOW);
         gprs.sendSMS(phone, massage);
       } else if(strcmp(massage, MESSAGE_2ON) == 0){
-        digitalWrite(6, LOW);
+        digitalWrite(6, HIGH);
         gprs.sendSMS(phone, massage);
       } else if(strcmp(massage, MESSAGE_0reset) == 0){
       digitalWrite(4, LOW);
@@ -197,9 +208,9 @@ void loop()
       digitalWrite(16, LOW);
       gprs.sendSMS(phone, massage);
       } else if(strcmp(massage, MESSAGE_S4RESET) == 0){
-      digitalWrite(17, HIGH);
+      digitalWrite(7, HIGH);
       delay(3000);
-      digitalWrite(17, LOW);
+      digitalWrite(7, LOW);
       gprs.sendSMS(phone, massage);
       } else if(strcmp(massage, MESSAGE_S5RESET) == 0){
       digitalWrite(18, HIGH);
