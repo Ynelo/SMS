@@ -157,7 +157,7 @@ void loop()
       digitalWrite(6, LOW);
       delay(3000);
       digitalWrite(4, HIGH);
-      digitalWrite(6, LOW);
+      digitalWrite(6, HIGH);
       gprs.sendSMS(phone, massage);
       } else if(strcmp(massage, MESSAGE_alloff) == 0){
       digitalWrite(4, LOW);
