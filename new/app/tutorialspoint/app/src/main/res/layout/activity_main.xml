@@ -312,7 +312,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="800dp"
+        android:layout_marginTop="790dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Enter Phone Number"
@@ -339,7 +339,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="260dp"
         android:text="                  СЕРВЕРА ВКЛ/ОКТЛ"
         android:textSize="24sp" />
 
@@ -351,7 +351,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="450dp"
         android:text="            СЕРВЕРА ПЕРЕЗАГРУЗКА"
         android:textSize="24sp" />
 
@@ -363,7 +363,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="645dp"
+        android:layout_marginTop="635dp"
         android:text="                     ОСТАЛЬНОЕ"
         android:textSize="24sp" />
 
@@ -375,7 +375,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="755dp"
+        android:layout_marginTop="745dp"
         android:text="              НОМЕР ТЕЛЕФОНА"
         android:textSize="24sp" />
 
