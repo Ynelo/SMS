@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
         off2 = (Button) findViewById(R.id.off2);
         on2 = (Button) findViewById(R.id.on2);
         onall = (Button) findViewById(R.id.onall);
-        offall = (Button) findViewById(R.id.ofall);
+        offall = (Button) findViewById(R.id.offall);
         reset0 = (Button) findViewById(R.id.reset0);
         reset2 = (Button) findViewById(R.id.reset2);
         resetall = (Button) findViewById(R.id.resetall);
@@ -85,6 +85,8 @@ public class MainActivity extends Activity {
         phoneNo = settings.getString(PREF_NAME, "не определено");
 
         txtphoneNo.setText(phoneNo);
+
+
         off0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 sendSMSMessage("0off");
