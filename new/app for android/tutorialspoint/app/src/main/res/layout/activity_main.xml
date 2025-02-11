@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/on2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="58dp"
+        android:backgroundTint="#37FE00"
+        android:text="2 on"
+        app:layout_constraintEnd_toStartOf="@+id/off2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/on0"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/off2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF0000"
+        android:text="2 off"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/reset2"
+        app:layout_constraintStart_toEndOf="@+id/on2"
+        app:layout_constraintTop_toBottomOf="@+id/off0"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/reset2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="19dp"
+        android:backgroundTint="#FFD500"
+        android:text="2 reset"
+        app:layout_constraintBottom_toTopOf="@+id/resetall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/off2"
+        app:layout_constraintTop_toBottomOf="@+id/reset0"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/resetall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="19dp"
+        android:backgroundTint="#FFD500"
+        android:text="all reset"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/offall"
+        app:layout_constraintTop_toBottomOf="@+id/reset2"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/offall"
+        style="@style/ShapeAppearanceOverlay.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF0000"
+        android:text="all off"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/resetall"
+        app:layout_constraintStart_toEndOf="@+id/onall"
+        app:layout_constraintTop_toBottomOf="@+id/off2"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/onall"
+        style="@style/ShapeAppearanceOverlay.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="58dp"
+        android:backgroundTint="#37FD00"
+        android:text="all on"
+        app:layout_constraintEnd_toStartOf="@+id/offall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/on2"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/on0"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="58dp"
+        android:backgroundTint="#37FF00"
+        android:text="0 on"
+        android:textColor="#000000"
+        android:textColorHint="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/on2"
+        app:layout_constraintEnd_toStartOf="@+id/off0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/off0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="26dp"
+        android:backgroundTint="#FF0000"
+        android:text="0 off"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/off2"
+        app:layout_constraintEnd_toStartOf="@+id/reset0"
+        app:layout_constraintStart_toEndOf="@+id/on0"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/reset0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="19dp"
+        android:backgroundTint="#FFD500"
+        android:text="0 reset"
+        app:layout_constraintBottom_toTopOf="@+id/reset2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/off0"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="249dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill,LabelFor,MissingConstraints,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/s1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="58dp"
+        android:backgroundTint="#00DCDC"
+        android:text="s1"
+        app:layout_constraintEnd_toStartOf="@+id/s2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onall"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="177dp"
+        android:text="Розетки"
+        android:textColor="#546E7A"
+        android:textColorLink="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/s2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#00DCDC"
+        android:text="s2"
+        app:layout_constraintEnd_toStartOf="@+id/s3"
+        app:layout_constraintStart_toEndOf="@+id/s1"
+        app:layout_constraintTop_toBottomOf="@+id/offall"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/s3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="19dp"
+        android:backgroundTint="#00DCDC"
+        android:text="s3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/s2"
+        app:layout_constraintTop_toBottomOf="@+id/resetall"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/s4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="58dp"
+        android:backgroundTint="#00DCDC"
+        android:text="s4"
+        app:layout_constraintEnd_toStartOf="@+id/s5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s1"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/s5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="162dp"
+        android:backgroundTint="#00DCDC"
+        android:text="s5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/s4"
+        app:layout_constraintTop_toBottomOf="@+id/s2"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="1dp"
+        android:text="Сервера||Питание"
+        android:textColor="#546E7A"
+        android:textColorLink="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/s2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offall"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/s1r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="58dp"
+        android:backgroundTint="#9C46FF"
+        android:text="s1r"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/s2r"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s4"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/s4r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="58dp"
+        android:backgroundTint="#9C46FF"
+        android:text="s4r"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/s5r"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s1r"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/s2r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#9C46FF"
+        android:text="s2r"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/s3r"
+        app:layout_constraintStart_toEndOf="@+id/s1r"
+        app:layout_constraintTop_toBottomOf="@+id/s5"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/s5r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#9C46FF"
+        android:text="s5r"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/arduino"
+        app:layout_constraintStart_toEndOf="@+id/s4r"
+        app:layout_constraintTop_toBottomOf="@+id/s2r"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/arduino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#FF0000"
+        android:text="ARDUINO RESET"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/s5r"
+        app:layout_constraintTop_toBottomOf="@+id/s3r"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/s3r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="19dp"
+        android:backgroundTint="#9C46FF"
+        android:text="s3r"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/s2r"
+        app:layout_constraintTop_toBottomOf="@+id/s3"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="8dp"
+        android:text="Сервера||Перезагрузка"
+        android:textColor="#546E7A"
+        android:textColorLink="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/s2r"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s5"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="9dp"
+        android:backgroundTint="#00FFD9"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextPhone"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
